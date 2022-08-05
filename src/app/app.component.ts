@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Dialog } from '@capacitor/dialog';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'capApp';
+
+  async showAlert(){
+    await Dialog.alert({
+      title: 'Atención',
+      message: 'Esto es una alertaa',
+    });
+  }
 }
